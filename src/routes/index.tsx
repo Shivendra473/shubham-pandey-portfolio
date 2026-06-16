@@ -9,6 +9,7 @@ import { Testimonials } from "@/components/landing/Testimonials";
 import { Process } from "@/components/landing/Process";
 import { Footer } from "@/components/landing/Footer";
 import { NewsChannel } from "@/components/landing/NewsChannel";
+import { NewsChannelSecond } from "@/components/landing/NewsChannelSecond";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -45,6 +46,7 @@ function Index() {
         <Hero />
         {/* <WhyChooseUs /> */}
         <NewsChannel />
+        <NewsChannelSecond />
       </main>
       <Footer />
     </div>
