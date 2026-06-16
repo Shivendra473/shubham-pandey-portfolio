@@ -1,18 +1,18 @@
 import { motion, useReducedMotion } from "framer-motion";
-import fieldImg from "@/assets/image-66.jpeg";
-import news18Logo from "@/assets/News18.svg";
+import fieldImg from "@/assets/image-55.jpeg";
+import zeeLogo from "@/assets/zee.png";
 
 const NEWS18 = {
-  channel: "News18",
-  yearFrom: "2015",
-  yearTill: "Present",
+  channel: "Zee News",
+  yearFrom: "2024",
+  yearTill: "2022",
   title: "Field reporting that puts people first",
   lead: "From village ground reports to primetime bulletins — delivering verified news from Uttar Pradesh and beyond for News18 audiences nationwide.",
   body: "Covered elections, monsoon disasters, rural development, and breaking political stories with on-ground reporting, live crosses, and in-depth Hindi & English coverage. Trusted for accurate, timely journalism when it matters most.",
   highlights: ["Live field reporting", "Political & social beats", "Hindi & English coverage"],
 };
 
-export function NewsChannel() {
+export function NewsChannelThird() {
   const reduceMotion = useReducedMotion();
 
   return (
@@ -60,7 +60,7 @@ export function NewsChannel() {
                 aria-hidden
               >
                 <img
-                  src={news18Logo}
+                  src={zeeLogo}
                   alt=""
                   className="h-full w-full object-contain object-right-top opacity-[0.32]"
                 />

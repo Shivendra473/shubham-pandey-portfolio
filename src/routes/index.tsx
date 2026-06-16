@@ -8,23 +8,24 @@ import { WhyChooseUs } from "@/components/landing/WhyChooseUs";
 import { Testimonials } from "@/components/landing/Testimonials";
 import { Process } from "@/components/landing/Process";
 import { Footer } from "@/components/landing/Footer";
-import { NewsChannel } from "@/components/landing/NewsChannel";
-import { NewsChannelSecond } from "@/components/landing/NewsChannelSecond";
+import { ProfessionalJourney } from "@/components/landing/ProfessionalJourney";
+import { Achievements } from "@/components/landing/Achievements";
+import { Contact } from "@/components/landing/Contact";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Institute For Industrial Development" },
+      { title: "Shubham Pandey - Senior Journalist at News18" },
       {
         name: "description",
         content:
-          "Government-certified skill development & education platform. Learn web development, digital marketing, AI, design and more with placement support.",
+          "Portfolio of Shubham Pandey, Senior Journalist based in Lucknow, U.P. Covering politics, society, and breaking news through field reporting, live anchoring, and investigative stories for News18 and national broadcasters.",
       },
-      { property: "og:title", content: "Institute For Industrial Development" },
+      { property: "og:title", content: "Shubham Pandey - Senior Journalist at News18" },
       {
         property: "og:description",
         content:
-          "Join 15,000+ students. Certified courses, expert trainers, and placement support for India's future workforce.",
+          "Truthful, timely stories from the ground to primetime. Explore Shubham Pandey's professional journey, reporting highlights, and get in touch for news tips and press inquiries.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -45,8 +46,9 @@ function Index() {
       <main>
         <Hero />
         {/* <WhyChooseUs /> */}
-        <NewsChannel />
-        <NewsChannelSecond />
+        <ProfessionalJourney />
+        <Achievements />
+        <Contact />
       </main>
       <Footer />
     </div>

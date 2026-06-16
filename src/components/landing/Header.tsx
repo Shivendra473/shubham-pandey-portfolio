@@ -4,9 +4,9 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "About", href: "#home" },
-  { label: "Stories", href: "#work" },
-  { label: "Highlights", href: "#why" },
-  { label: "Contact", href: "#contact" },
+  { label: "Professional Journey", href: "#journey" },
+  { label: "My Reportings", href: "#reportings" },
+  { label: "Connect", href: "#contact" },
 ];
 
 export function Header() {
@@ -17,7 +17,7 @@ export function Header() {
       <div className="border-b border-border bg-background/90 backdrop-blur-md">
         <div className="container mx-auto flex h-15 items-center justify-between px-4 py-3">
           <a href="#home" className="text-lg font-bold tracking-tight text-primary sm:text-xl">
-            Rajesh<span className="text-accent">.</span>
+            Shubham Pandey<span className="text-accent">.</span>
           </a>
 
           <nav className="hidden items-center gap-7 lg:flex">

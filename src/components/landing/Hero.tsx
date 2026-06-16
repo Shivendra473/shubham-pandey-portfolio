@@ -3,8 +3,8 @@ import { ArrowDown, Linkedin, Mail, Twitter, Youtube } from "lucide-react";
 import profileImg from "@/assets/image-11.jpeg";
 
 const JOURNALIST = {
-  name: "Rajesh Pandey",
-  role: "Senior Journalist & News Anchor",
+  name: "Shubham Pandey",
+  role: "Senior Journalist",
   location: "Lucknow, U.P., India",
   tagline: {
     before: "I tell ",
@@ -89,7 +89,7 @@ export function Hero() {
             <div>
               <div className="flex flex-wrap items-center gap-3">
                 <a
-                  href="#work"
+                  href="#journey"
                   className="inline-flex items-center gap-2 rounded-lg border-2 border-accent bg-accent/5 px-5 py-2.5 text-sm font-semibold text-accent transition-all hover:bg-accent hover:text-accent-foreground lg:px-6 lg:py-3 lg:text-base"
                 >
                   View Stories

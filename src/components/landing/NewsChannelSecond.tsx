@@ -1,11 +1,11 @@
 import { motion, useReducedMotion } from "framer-motion";
-import fieldImg from "@/assets/image-33.jpeg";
-import zeeLogo from "@/assets/zee.png";
+import fieldImg from "@/assets/image-44.jpeg";
+import newsnationLogo from "@/assets/news-nation.png";
 
-const ZEE_NEWS = {
-  channel: "Zee News",
-  yearFrom: "2012",
-  yearTill: "Present",
+const NEWS_NATION = {
+  channel: "News Nation",
+  yearFrom: "2024",
+  yearTill: "2025",
   title: "Breaking news with clarity and conviction",
   lead: "Anchoring prime-time segments and special reports that bring Uttar Pradesh's most important stories to millions of viewers across India.",
   body: "Led coverage on state politics, public policy, and citizen issues — combining studio presentation with sharp analysis and responsible, fact-led journalism on one of India's largest news networks.",
@@ -16,15 +16,18 @@ export function NewsChannelSecond() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative bg-background pb-12 sm:pb-14">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={reduceMotion ? false : { opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-          className="relative overflow-hidden rounded-2xl bg-gradient-hero text-primary-foreground shadow-card-hover ring-1 ring-white/10"
-        >
+    <motion.div
+      initial={reduceMotion ? false : { opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={
+        reduceMotion
+          ? undefined
+          : { scale: 1.02, y: -8, transition: { type: "spring", stiffness: 320, damping: 22 } }
+      }
+      className="relative origin-center overflow-hidden rounded-2xl bg-gradient-hero text-primary-foreground shadow-card-hover ring-1 ring-white/10 transition-shadow duration-300 hover:shadow-elevated"
+    >
           <div
             className="pointer-events-none absolute inset-0 opacity-40"
             style={{
@@ -46,7 +49,7 @@ export function NewsChannelSecond() {
                 aria-hidden
               >
                 <img
-                  src={zeeLogo}
+                  src={newsnationLogo}
                   alt=""
                   className="h-full w-full object-contain object-left-top opacity-[0.32]"
                 />
@@ -55,11 +58,11 @@ export function NewsChannelSecond() {
               {/* Box 2 — year from till */}
               <div className="relative z-10 flex items-center justify-start rounded-xl border border-white/15 bg-gradient-to-l from-white/[0.1] via-white/[0.04] to-transparent px-4 py-3 text-left sm:px-5 sm:py-3.5">
                 <p className="text-left text-sm font-semibold tracking-wide text-white/90 sm:text-base">
-                  <span className="text-accent">{ZEE_NEWS.yearFrom}</span>
+                  <span className="text-accent">{NEWS_NATION.yearFrom}</span>
                   <span className="mx-2 text-white/40">—</span>
-                  <span className="text-accent">{ZEE_NEWS.yearTill}</span>
+                  <span className="text-accent">{NEWS_NATION.yearTill}</span>
                   <span className="mx-2 text-white/40">·</span>
-                  <span className="font-bold text-white">{ZEE_NEWS.channel}</span>
+                  <span className="font-bold text-white">{NEWS_NATION.channel}</span>
                 </p>
               </div>
 
@@ -70,18 +73,18 @@ export function NewsChannelSecond() {
                     Featured Channel
                   </p>
                   <h2 className="mt-3 text-left text-2xl font-bold leading-tight tracking-tight sm:text-3xl lg:text-[1.75rem] xl:text-3xl">
-                    {ZEE_NEWS.title}
+                    {NEWS_NATION.title}
                   </h2>
                   <p className="mt-3 text-left text-sm leading-relaxed text-white/80 sm:text-base lg:mt-4 lg:text-[0.95rem] lg:leading-relaxed xl:text-base">
-                    {ZEE_NEWS.lead}
+                    {NEWS_NATION.lead}
                   </p>
                   <p className="mt-3 text-left text-sm leading-relaxed text-white/60 lg:text-[0.9rem] xl:text-sm">
-                    {ZEE_NEWS.body}
+                    {NEWS_NATION.body}
                   </p>
                 </div>
 
                 <div className="mt-5 flex w-full flex-wrap justify-start gap-2 lg:mt-4">
-                  {ZEE_NEWS.highlights.map((item) => (
+                  {NEWS_NATION.highlights.map((item) => (
                     <span
                       key={item}
                       className="rounded-full border border-white/12 bg-white/[0.06] px-3 py-1 text-left text-xs font-medium text-white/75 sm:text-sm"
@@ -104,8 +107,6 @@ export function NewsChannelSecond() {
               />
             </div>
           </div>
-        </motion.div>
-      </div>
-    </section>
+    </motion.div>
   );
 }
