@@ -7,8 +7,8 @@ import { WhoCanApply } from "@/components/landing/WhoCanApply";
 import { WhyChooseUs } from "@/components/landing/WhyChooseUs";
 import { Testimonials } from "@/components/landing/Testimonials";
 import { Process } from "@/components/landing/Process";
-import { MissionCta } from "@/components/landing/MissionCta";
 import { Footer } from "@/components/landing/Footer";
+import { NewsChannel } from "@/components/landing/NewsChannel";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -43,8 +43,8 @@ function Index() {
       <Header />
       <main>
         <Hero />
-        <WhyChooseUs />
-        <MissionCta />
+        {/* <WhyChooseUs /> */}
+        <NewsChannel />
       </main>
       <Footer />
     </div>
